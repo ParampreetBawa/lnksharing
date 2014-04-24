@@ -7,7 +7,9 @@ dataSource {
 //    password = ""
     username = "root"
     password = "perx"
+    loggingSql = true
 }
+
 hibernate {
     cache.use_second_level_cache = true
     cache.use_query_cache = false
@@ -23,6 +25,7 @@ environments {
             dbCreate = "update" // one of 'create', 'create-drop', 'update', 'validate', ''
 //            url = "jdbc:h2:mem:devDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE"
             url = "jdbc:mysql://localhost:3306/linksharing"
+
         }
     }
     test {

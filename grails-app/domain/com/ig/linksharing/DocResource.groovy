@@ -1,13 +1,9 @@
 package com.ig.linksharing
 
-import org.springframework.web.multipart.MultipartFile
-
 class DocResource extends Resource {
-    MultipartFile file
+    byte[] file
+
     static constraints = {
-        file(nullable: false)
-    }
-    static mapping = {
-        file type:'blob'
+        file(nullable: false,maxSize: 5*1024*1024)
     }
 }

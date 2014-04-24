@@ -1,5 +1,7 @@
 package com.ig.linksharing
 
+import org.apache.log4j.Logger
+
 class AdminController {
 
     def index() {
@@ -18,7 +20,8 @@ class AdminController {
     }
     def beforeInterceptor = [action: this.&adminAccessInterCeptor]
     def adminAccessInterCeptor(){
-        println('admin access interceptor called')
+        log.trace('admin access interceptor called')
+//        println('admin access interceptor called')
         if(!session.user || !session.user.equals('admin@intelligrape.com')){
             println('rendering invalid')
             render 'invalid'

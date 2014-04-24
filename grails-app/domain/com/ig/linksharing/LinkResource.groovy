@@ -2,7 +2,8 @@ package com.ig.linksharing
 
 class LinkResource extends Resource{
 
-    URL url
+    String url
     static constraints = {
     }
+
 }

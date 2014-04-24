@@ -5,7 +5,6 @@ class ApplicationTagLib {
     //static encodeAsForTags = [tagName: 'raw']
     static namespace = "ls"
     def unreadItems = { attr ->
-        println(attr)
         List<Resource> resources = attr.resources
         int count = Integer.parseInt(attr.get('countt'))
         if (count > resources.size()) count = resources.size()
@@ -17,7 +16,7 @@ class ApplicationTagLib {
     def ownedTopics = { attr ->
         User user = User.findByEmail(session.user)
         List<Topic> list = attr.topic
-        list = list.each { it.createdBy == user }
+        list = list.each { it.createdBy.email == user.email }
         out << render(template: '/user/showTopics', model: [topics: list, caption: 'Owned Topics'])
     }
     def formattedDate = { attr ->

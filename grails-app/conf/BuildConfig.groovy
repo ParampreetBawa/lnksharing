@@ -64,6 +64,8 @@ grails.project.dependency.resolution = {
         runtime ":hibernate:3.6.10.9" // or ":hibernate4:4.3.4"
         runtime ":database-migration:1.3.8"
         runtime ":jquery:1.11.0.2"
+        compile ":jquery-ui:1.10.3"
+        compile ":jquery-validation:1.9"
         runtime ":resources:1.2.7"
         // Uncomment these (or add new ones) to enable additional resources capabilities
         //runtime ":zipped-resources:1.0.1"
@@ -78,5 +80,6 @@ grails.project.dependency.resolution = {
         //compile ":less-asset-pipeline:1.5.3"
         //compile ":coffee-asset-pipeline:1.5.0"
         //compile ":handlebars-asset-pipeline:1.3.0.1"
+        compile ":mail:1.0.4"
     }
 }

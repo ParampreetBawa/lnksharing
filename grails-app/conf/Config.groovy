@@ -61,6 +61,13 @@ grails {
         // escapes all not-encoded output at final stage of outputting
         // filteringCodecForContentType.'text/html' = 'html'
     }
+    mail {
+        host = "smtp.gmail.com"
+        port  = 465
+        username = "parampreet.singh@intelligrape.com"
+        password = "Par@1234"
+    }
+
 }
 
 
@@ -106,6 +113,9 @@ log4j = {
     //appenders {
     //    console name:'stdout', layout:pattern(conversionPattern: '%c{2} %m%n')
     //}
+    appenders{
+        console name:'stdout',layout:pattern(conversionPattern: '%c{2} %m%n')
+    }
 
     error  'org.codehaus.groovy.grails.web.servlet',        // controllers
            'org.codehaus.groovy.grails.web.pages',          // GSP

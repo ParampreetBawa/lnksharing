@@ -11,7 +11,7 @@
         <td>${resource.title}</td>
         <td>${resource.summary}</td>
         <td>${resource.createdBy}</td>
-        <td><g:checkBox name="readLink"></g:checkBox></td>
+        <td><g:checkBox name="readLink" value="${resource.id}" onclick="markreadunread(this);"></g:checkBox></td>
     </tr>
 </g:each>
 </table>
